@@ -1,0 +1,52 @@
+{
+  "id": "E039",
+  "title": "이상기체 밀도 계산기",
+  "inputs_text": "절대압 p [Pa], 몰질량 M [kg/mol], 절대온도 T [K]",
+  "formula": "ρ = p M / (R T)",
+  "output_text": "기체 밀도 ρ [kg/m³]",
+  "assumptions": "p,M,T>0. 이상기체 근사이며 고압·응축 근처는 제외한다. g/mol은 kg/mol로 변환하고 게이지압을 절대압처럼 쓰지 않는다.",
+  "purpose": "기체 밀도 온도 압력 계산 / 공정·실험 물성 검산",
+  "sources": [
+    {
+      "label": "OpenStax · Molecular Model of an Ideal Gas",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/2-1-molecular-model-of-an-ideal-gas"
+    }
+  ],
+  "slug": "eng-ideal-gas-density",
+  "category": "기체",
+  "result_label": "이상기체 밀도 ρ",
+  "result_dimension": "density",
+  "fields": [
+    {
+      "key": "p",
+      "label": "절대압 p",
+      "dimension": "pressure",
+      "example": 101325,
+      "constraint": "positive",
+      "display_unit": "kPa",
+      "display_value": "101.325"
+    },
+    {
+      "key": "m",
+      "label": "몰질량 M",
+      "dimension": "molarMass",
+      "example": 0.02897,
+      "constraint": "positive",
+      "display_unit": "gmol",
+      "display_value": "28.97"
+    },
+    {
+      "key": "t",
+      "label": "절대온도 T",
+      "dimension": "temperature",
+      "example": 300,
+      "constraint": "positive",
+      "display_unit": "K",
+      "display_value": "300"
+    }
+  ],
+  "site": "https://nanalab.kr/eng-ideal-gas-density/",
+  "repository": "https://github.com/NaNaCompany/eng-ideal-gas-density",
+  "condition": "",
+  "output_unit": "kgm3"
+}
